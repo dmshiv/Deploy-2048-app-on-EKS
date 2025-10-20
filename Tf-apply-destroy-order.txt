@@ -1,0 +1,18 @@
+apply tf folders ORDER
+
+cloud-vpc-sub-IGW...etc
+EKS
+Fargate
+AWS-ALb-controller
+k8-deploy-yaml-files-exec-by-TF
+
+DESTROY tf folders ORDER
+
+k8-deploy-yaml-files-exec-by-TF
+AWS-ALb-controller
+Fargate 
+EKS
+cloud-vpc-sub-IGW...etc
+
+
+

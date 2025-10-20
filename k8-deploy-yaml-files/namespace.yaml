@@ -1,0 +1,7 @@
+# Kubernetes Namespace for 2048 Game
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: game-2048
+  labels:
+    app: game-2048

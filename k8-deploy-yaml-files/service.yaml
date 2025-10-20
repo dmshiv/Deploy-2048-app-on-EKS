@@ -1,0 +1,16 @@
+# Service for 2048 Game
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-2048
+  namespace: game-2048
+  labels:
+    app: game-2048
+spec:
+  type: NodePort
+  selector:
+    app: game-2048
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80

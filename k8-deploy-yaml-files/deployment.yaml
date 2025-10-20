@@ -1,0 +1,30 @@
+# Deployment for 2048 Game
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-2048
+  namespace: game-2048
+  labels:
+    app: game-2048
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: game-2048
+  template:
+    metadata:
+      labels:
+        app: game-2048
+    spec:
+      containers:
+      - name: game-2048
+        image: public.ecr.aws/l6m2t8p7/docker-2048:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
